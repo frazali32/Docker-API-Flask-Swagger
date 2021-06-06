@@ -1,0 +1,39 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "description" : "Swagger API Documentation. This is a static Swagger UI meant for demonstration purposes, http://localhost:56732/template will take you where you can enter a name and get a response.",
+    "title" : "Hello User API"
+  },
+  "paths" : {
+    "/Hello/{user}" : {
+      "get" : {
+        "description" : "Returns a greeting to the user!",
+        "parameters" : [ {
+          "name" : "user",
+          "in" : "path",
+          "type" : "string",
+          "required" : true,
+          "description" : "The name of the user to greet."
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Returns the greeting.",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "400": {
+            "description": "Invalid characters in \"user\" were provided."
+          }
+        }
+      }
+    }
+  },
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/frazali32/Hello_world_2/1.0.0",
+  "schemes": [
+    "https",
+    "http"
+  ]
+}
